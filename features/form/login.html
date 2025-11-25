@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SGSI La Marina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Formulario de Inicio de Sesión -->
+        <div id="loginForm">
+            <div class="login-header">
+                <h1>Iniciar Sesión</h1>
+                <p class="small">SGSI La Marina</p>
+            </div>
+            <form id="loginFormElement" onsubmit="return handleLogin(event)">
+                <div class="form-group">
+                    <label for="loginUsuario">Usuario</label>
+                    <input type="text" id="loginUsuario" name="usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Contraseña</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit" class="btn-full">Iniciar Sesión</button>
+            </form>
+            <div class="form-toggle">
+                <p>¿No tienes cuenta? <a href="#" onclick="showRegisterForm(); return false;">Crear una cuenta</a></p>
+            </div>
+        </div>
+
+        <!-- Formulario de Registro -->
+        <div id="registerForm">
+            <div class="login-header">
+                <h1>Crear Cuenta</h1>
+                <p class="small">SGSI La Marina</p>
+            </div>
+            <form id="registerFormElement" onsubmit="return handleRegister(event)">
+                <div class="form-group">
+                    <label for="registerNombre">Nombre</label>
+                    <input type="text" id="registerNombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerApellido">Apellido</label>
+                    <input type="text" id="registerApellido" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerUsuario">Usuario</label>
+                    <input type="text" id="registerUsuario" name="usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerRol">Rol</label>
+                    <select id="registerRol" name="rol" required>
+                        <option value="">Seleccione un rol</option>
+                        <option value="admin">Administrador</option>
+                        <option value="usuario">Usuario</option>
+                        <option value="auditor">Auditor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Contraseña</label>
+                    <input type="password" id="registerPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="registerConfirmPassword" name="confirmPassword" required>
+                    <span class="error-message" id="passwordError">Las contraseñas no coinciden</span>
+                </div>
+                <button type="submit" class="btn-full">Crear Cuenta</button>
+                <button type="button" class="btn-secondary-full" onclick="showLoginForm()">Volver al Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showRegisterForm() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registerForm').style.display = 'block';
+        }
+
+        function showLoginForm() {
+            document.getElementById('registerForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('passwordError').style.display = 'none';
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const usuario = document.getElementById('loginUsuario').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Aquí puedes agregar la lógica de autenticación
+            console.log('Login:', { usuario, password });
+            
+            // Ejemplo: redirigir a index.html después del login exitoso
+            // window.location.href = 'index.html';
+            
+            alert('Inicio de sesión exitoso');
+            return false;
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('registerConfirmPassword').value;
+            const errorMessage = document.getElementById('passwordError');
+            
+            if (password !== confirmPassword) {
+                errorMessage.style.display = 'block';
+                return false;
+            }
+            
+            errorMessage.style.display = 'none';
+            
+            const formData = {
+                nombre: document.getElementById('registerNombre').value,
+                apellido: document.getElementById('registerApellido').value,
+                usuario: document.getElementById('registerUsuario').value,
+                rol: document.getElementById('registerRol').value,
+                password: password
+            };
+            
+            // Aquí puedes agregar la lógica para guardar el usuario
+            console.log('Registro:', formData);
+            
+            alert('Cuenta creada exitosamente');
+            showLoginForm();
+            return false;
+        }
+    </script>
+</body>
+</html>

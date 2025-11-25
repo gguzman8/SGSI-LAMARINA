@@ -1,0 +1,92 @@
+   .login-container {
+            max-width: 450px;
+            margin: 60px auto;
+            padding: 32px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        }
+        .login-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .login-header h1 {
+            color: #1a6b4b;
+            font-size: 24px;
+            margin: 0 0 8px 0;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #111;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #d7dde6;
+            box-sizing: border-box;
+            font-family: Inter, Roboto, Arial;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1a6b4b;
+        }
+        .btn-full {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            background: #198754;
+            color: white;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+        .btn-full:hover {
+            background: #145938;
+        }
+        .btn-secondary-full {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            background: #6c757d;
+            color: white;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+        .btn-secondary-full:hover {
+            background: #5a6268;
+        }
+        .form-toggle {
+            text-align: center;
+            margin-top: 16px;
+            color: #444;
+        }
+        .form-toggle a {
+            color: #1a6b4b;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .form-toggle a:hover {
+            text-decoration: underline;
+        }
+        #registerForm {
+            display: none;
+        }
+        .error-message {
+            color: #dc3545;
+            font-size: 13px;
+            margin-top: 4px;
+            display: none;
+        }
