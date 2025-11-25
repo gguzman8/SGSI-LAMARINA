@@ -61,19 +61,29 @@ function showPolicy(key){
       // Señala si alguno de los indicadores está fuera de meta (simulación)
       var v1 = document.getElementById('val1').innerText;
       var v2 = document.getElementById('val2').innerText;
+      var v3 = document.getElementById('val3').innerText;
       var out = [];
-      // parse simple: if percentage <95 mark
-      if(v1.indexOf('%')>-1){
+      
+      // % Transacciones exitosas >= 98%
+      if(v1.indexOf('%') > -1){
         var num = parseFloat(v1.replace('%',''));
-        if(num < 95) out.push('% Accesos revisados ('+v1+') < meta (95%)');
+        if(num < 98) out.push('% Transacciones exitosas ('+v1+') < meta (98%)');
       }
-      // hours
-      if(v2.indexOf('h')>-1){
+      
+      // Tiempo medio de entrega <= 48h
+      if(v2.indexOf('h') > -1){
         var hv = parseFloat(v2.replace('h',''));
-        if(hv > 24) out.push('Tiempo medio de revocación ('+v2+') > meta (24h)');
+        if(hv > 48) out.push('Tiempo medio de entrega ('+v2+') > meta (48h)');
       }
-      if(out.length){
-        alert('Hay indicadores fuera de meta:\\n - ' + out.join('\\n - '));
+      
+      // Tasa de fraude <= 0.5%
+      if(v3.indexOf('%') > -1){
+        var fv = parseFloat(v3.replace('%',''));
+        if(fv > 0.5) out.push('Tasa de fraude ('+v3+') > meta (0.5%)');
+      }
+      
+      if(out.length > 0){
+        alert('Hay indicadores fuera de meta:\n - ' + out.join('\n - '));
       } else {
         alert('Todos los indicadores dentro de meta (simulado).');
       }

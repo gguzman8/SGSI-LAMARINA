@@ -178,15 +178,15 @@
 						</p>
 					</section>
 
-					<!-- Procesos (1 funcional) -->
+					<!-- Procesos (adaptado a e-commerce y marketplace) -->
 					<section id="procesos" class="card" style="margin-top: 12px">
 						<h2>Procesos</h2>
+						<p class="small">Proceso funcional implementado: gestión de e-commerce y marketplace.</p>
+
 						<div style="margin-top: 8px">
-							<h3>Proceso: Gestión de Accesos (PROC-ACCESOS)</h3>
+							<h3>Proceso: Gestión e-commerce y Marketplace (PROC-ECOMM)</h3>
 							<p>
-								<strong>Objetivo del proceso:</strong> Garantizar que los
-								accesos a sistemas se concedan, revisen y revoquen conforme a la
-								política de control de accesos.
+								<strong>Objetivo del proceso:</strong> Asegurar que la plataforma de e-commerce y marketplace opere con seguridad, disponibilidad y confianza para clientes y vendedores, mitigando riesgos como fraude, fallos en pagos, pérdida de pedidos o interrupciones del servicio.
 							</p>
 
 							<label>Indicadores del proceso (obligatorio medir):</label>
@@ -201,49 +201,42 @@
 								</thead>
 								<tbody id="indicatorsTable">
 									<tr>
-										<td>% Accesos revisados</td>
-										<td>
-											% de cuentas cuyo acceso fue revisado trimestralmente
-										</td>
-										<td>≥ 95%</td>
-										<td id="val1">88%</td>
+										<td>% Transacciones exitosas</td>
+										<td>% de pagos completados sin error sobre el total de intentos</td>
+										<td>≥ 98%</td>
+										<td id="val1">96%</td>
 									</tr>
 									<tr>
-										<td>Tiempo medio de revocación</td>
-										<td>
-											Tiempo (horas) desde solicitud de revocación hasta su
-											implementación
-										</td>
-										<td>≤ 24h</td>
-										<td id="val2">36h</td>
+										<td>Tiempo medio de entrega</td>
+										<td>Tiempo medio (horas) desde confirmación hasta entrega al cliente</td>
+										<td>≤ 48h</td>
+										<td id="val2">54h</td>
+									</tr>
+									<tr>
+										<td>Tasa de fraude</td>
+										<td>% de transacciones identificadas como fraude o chargeback</td>
+										<td>≤ 0.5%</td>
+										<td id="val3">0.9%</td>
 									</tr>
 								</tbody>
 							</table>
 
 							<div style="margin-top: 10px">
-								<label for="updateInd"
-									>Actualizar indicador (simulación):</label
-								>
+								<label for="updateInd">Actualizar indicador (simulación):</label>
 								<select id="indSelect">
-									<option value="val1">% Accesos revisados</option>
-									<option value="val2">Tiempo medio de revocación</option>
+									<option value="val1">% Transacciones exitosas</option>
+									<option value="val2">Tiempo medio de entrega</option>
+									<option value="val3">Tasa de fraude</option>
 								</select>
-								<input
-									id="indValue"
-									type="text"
-									placeholder="Nuevo valor (ej. 92% o 12h)"
-								/>
-								<button class="btn" onclick="updateIndicator()">
-									Actualizar
-								</button>
+								<input id="indValue" type="text" placeholder="Nuevo valor (ej. 98% o 36h o 0.3%)" />
+								<button class="btn" onclick="updateIndicator()">Actualizar</button>
 							</div>
 
 							<hr />
 
 							<h4>Hallazgos (incidencias detectadas)</h4>
 							<p class="small">
-								Registra aquí los hallazgos relacionados con el proceso. Deben
-								incluir: descripción, impacto, recomendación y responsable.
+								Registra aquí los hallazgos relacionados con el proceso. Deben incluir: descripción, impacto, recomendación y responsable.
 							</p>
 
 							<div>
@@ -251,25 +244,25 @@
 								<textarea
 									id="hallazgoDesc"
 									rows="3"
-									placeholder="Ej: Se detectaron cuentas sin revisión por más de 6 meses"
+									placeholder="Ej: Fallos en sincronización de inventario"
 								></textarea>
 								<label>Impacto:</label>
 								<input
 									id="hallazgoImpact"
 									type="text"
-									placeholder="Ej: Acceso no justificado a información sensible"
+									placeholder="Ej: Sobreventa o pérdida de ventas"
 								/>
 								<label>Recomendación:</label>
 								<input
 									id="hallazgoRec"
 									type="text"
-									placeholder="Ej: Forzar revisión y revocación de cuentas inactivas"
+									placeholder="Ej: Implementar validaciones en tiempo real"
 								/>
 								<label>Responsable:</label>
 								<input
 									id="hallazgoResp"
 									type="text"
-									placeholder="Ej: Responsable TI"
+									placeholder="Ej: Equipo de Operaciones TI"
 								/>
 								<div style="margin-top: 8px">
 									<button class="btn" onclick="addHallazgo()">
