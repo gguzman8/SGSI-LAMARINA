@@ -1,8 +1,21 @@
 function showPolicy(key){
-      var title = key === 'POL-01' ? 'POL-01: Política de Control de Accesos' : 'POL-02: Política de Gestión de Incidentes';
-      var desc = key === 'POL-01' 
-        ? 'Esta política define roles, permisos, revisión periódica de accesos y requisitos de autenticación (MFA, least privilege).' 
-        : 'Esta política define detección, reporte y la cadena de gestión para respuesta y recuperación de incidentes.';
+      var title;
+      var desc;
+      
+      if(key === 'POL-01'){
+        title = 'POL-01: Política de Seguridad de Datos y Transacciones en eCommerce';
+        desc = 'Esta política protege los datos personales, financieros y transaccionales de los clientes que interactúan con la tienda en línea, evitando incidentes de seguridad, fraude y uso indebido de la información. Incluye medidas de encriptación, autenticación segura y auditoría de accesos.';
+      } else if(key === 'POL-02'){
+        title = 'POL-02: Política de Sincronización e Integridad de Inventarios y Omnicanalidad';
+        desc = 'Garantiza que los inventarios mostrados en la tienda en línea coincidan con los inventarios reales de tiendas físicas, bodegas y sistemas internos, reduciendo errores y pedidos no entregables. Define procesos de validación y sincronización periódica.';
+      } else if(key === 'POL-03'){
+        title = 'POL-03: Política de Disponibilidad y Desempeño de Plataformas de eCommerce';
+        desc = 'Asegura que la plataforma de comercio electrónico, catálogos, pasarelas y sistemas relacionados operen con altos niveles de disponibilidad, rendimiento y estabilidad. Incluye planes de contingencia, monitoreo 24/7 y acuerdos de nivel de servicio.';
+      } else if(key === 'POL-04'){
+        title = 'POL-04: Política de Logística Digital, Entregas y Seguimiento de Pedidos';
+        desc = 'Optimiza el proceso logístico digital para garantizar entregas puntuales, trazabilidad completa y comunicación transparente con los clientes. Define integración con sistemas de envío, actualizaciones de estado y resolución de incidencias logísticas.';
+      }
+      
       document.getElementById('policyTitle').innerText = title;
       document.getElementById('policyDesc').innerText = desc;
       document.getElementById('downloadPolicy').href = '/mnt/data/matriz de contexto.xlsx';
