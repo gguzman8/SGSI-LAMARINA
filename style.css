@@ -236,3 +236,127 @@ footer {
 	font-size: 14px;
 	color: #222;
 }
+
+/* Estilos para gestión de roles y hallazgos */
+.badge {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 12px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.badge-success {
+	background: #d4edda;
+	color: #155724;
+}
+
+.badge-warning {
+	background: #fff3cd;
+	color: #856404;
+}
+
+.btn-small {
+	padding: 6px 12px;
+	font-size: 13px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	background: #1a6b4b;
+	color: white;
+	font-weight: 600;
+	transition: background 0.2s;
+}
+
+.btn-small:hover {
+	background: #145938;
+}
+
+.btn-small.secondary {
+	background: #6c757d;
+}
+
+.btn-small.secondary:hover {
+	background: #5a6268;
+}
+
+.btn-small.danger {
+	background: #dc3545;
+}
+
+.btn-small.danger:hover {
+	background: #c82333;
+}
+
+.hallazgo {
+	background: #f8f9fa;
+	border: 1px solid #dee2e6;
+	padding: 12px;
+	margin-top: 12px;
+	border-radius: 6px;
+}
+
+.hallazgo:first-child {
+	margin-top: 0;
+}
+
+#hallazgoForm {
+	display: none;
+}
+
+#hallazgosList {
+	display: none;
+}
+
+/* Estilos del footer */
+footer {
+	background: #145938;
+	color: #ffffff;
+	padding: 40px 20px;
+	padding-top: 5rem;
+	height: 20rem;
+	text-align: center;
+}
+
+.footer-content {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+footer p {
+	margin: 0 0 20px 0;
+	font-size: 14px;
+	color: #cccccc;
+}
+
+footer h4 {
+	margin: 20px 0 12px 0;
+	font-size: 16px;
+	font-weight: 600;
+	color: #ffffff;
+}
+
+.footer-team {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.footer-team li {
+	font-size: 14px;
+	color: #b8b8b8;
+}
+
+@media (max-width: 768px) {
+	footer {
+		padding: 30px 15px;
+	}
+	
+	.footer-team {
+		font-size: 13px;
+	}
+}

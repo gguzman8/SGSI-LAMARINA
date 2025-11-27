@@ -317,7 +317,7 @@
 						incluir: descripción, impacto, recomendación y responsable.
 					</p>
 
-					<div>
+					<div id="hallazgoForm">
 						<label>Descripción del hallazgo:</label>
 						<textarea
 							id="hallazgoDesc"
@@ -331,7 +331,7 @@
 							placeholder="Ej: Sobreventa o pérdida de ventas"
 						/>
 						<label>Recomendación:</label>
-						<input
+						<input	
 							id="hallazgoRec"
 							type="text"
 							placeholder="Ej: Implementar validaciones en tiempo real"
@@ -650,10 +650,25 @@
 		<div class="modal-content" role="dialog" aria-modal="true" onclick="event.stopPropagation()">
 			<button class="modal-close" onclick="closeDocModal(event)">Cerrar</button>
 			<img id="docModalImg" src="" alt="" />
-			<div id="docModalCaption" class="modal-caption"></div>
-		</div>
+		<div id="docModalCaption" class="modal-caption"></div>
 	</div>
+</div>
 
+<footer>
+	<div class="footer-content">
+		<p>&copy; 2025 SGSI La Marina. Todos los derechos reservados.</p>
+		<h4>Diseñado y desarrollado por:</h4>
+		<ul class="footer-team">
+			<li>Diego Fernando Verduzco Castillo</li>
+			<li>Gabriela Guzman Castillo</li>
+			<li>Denisse Monserrat Solorzano Perez</li>
+		</ul>
+	</div>
+</footer>
+	<!-- Scripts de autenticación y gestión -->
+	<script src="js/auth.js"></script>
+	<script src="js/hallazgos.js"></script>
+	<script src="js/ui-manager.js"></script>
 	<script src="main.js"></script>
 
 	

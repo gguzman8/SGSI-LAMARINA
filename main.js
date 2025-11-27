@@ -33,28 +33,12 @@ function showPolicy(key){
       document.getElementById('status').innerText = 'Indicadores actualizados (simulación). Revisa cumplimiento.';
     }
 
+    // Función addHallazgo movida a ui-manager.js
+    // Esta función se mantiene por compatibilidad si se llama desde el HTML
     function addHallazgo(){
-      var d = document.getElementById('hallazgoDesc').value.trim();
-      var i = document.getElementById('hallazgoImpact').value.trim();
-      var r = document.getElementById('hallazgoRec').value.trim();
-      var p = document.getElementById('hallazgoResp').value.trim();
-      if(!d || !i || !r || !p){ alert('Completa todos los campos del hallazgo.'); return; }
-      var container = document.getElementById('hallazgosList');
-      var id = 'H-' + (new Date()).getTime();
-      var html = '<div class="hallazgo"><strong>ID: '+id+'</strong><div class="small" style="margin-top:6px"><strong>Descripción:</strong> '+escapeHtml(d)+'</div><div class="small"><strong>Impacto:</strong> '+escapeHtml(i)+'</div><div class="small"><strong>Recomendación:</strong> '+escapeHtml(r)+'</div><div class="small"><strong>Responsable:</strong> '+escapeHtml(p)+'</div></div>';
-      container.insertAdjacentHTML('afterbegin', html);
-      // Limpiar campos
-      document.getElementById('hallazgoDesc').value='';
-      document.getElementById('hallazgoImpact').value='';
-      document.getElementById('hallazgoRec').value='';
-      document.getElementById('hallazgoResp').value='';
-      document.getElementById('status').innerText = 'Hallazgo registrado: ' + id;
-    }
-
-    function escapeHtml(unsafe) {
-      return unsafe.replace(/[&<"'>]/g, function(m) {
-        return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m];
-      });
+      if (typeof UIManager !== 'undefined' && UIManager.addHallazgoFromForm) {
+        UIManager.addHallazgoFromForm();
+      }
     }
 
     function simulateCheck(){
