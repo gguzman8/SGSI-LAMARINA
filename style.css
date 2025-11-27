@@ -165,14 +165,20 @@ footer {
 .doc-entry {
 	display: flex;
 	gap: 12px;
+	align-items: stretch; /* permitir que la miniatura llene la altura del contenedor */
 }
 .doc-thumb {
-	width: 96px;
-	height: auto;
+	height: 100%;    /* ocupar la altura del .doc-entry */
+	width: auto;      /* ancho se adapta proporcionalmente */
+	max-width: 160px; /* evitar que la imagen empuje demasiado el diseño */
+	display: block;
 	object-fit: cover;
 	border-radius: 6px;
 	border: 1px solid #e6e9ef;
 }
 .doc-entry .doc-text {
 	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
