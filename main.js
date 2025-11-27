@@ -88,3 +88,31 @@ function showPolicy(key){
         alert('Todos los indicadores dentro de meta (simulado).');
       }
     }
+
+// Modal / lightbox para ampliar miniaturas de documentos
+function openDocModal(src, alt){
+  var overlay = document.getElementById('docModal');
+  var img = document.getElementById('docModalImg');
+  var caption = document.getElementById('docModalCaption');
+  img.src = src;
+  img.alt = alt || '';
+  caption.innerText = alt || '';
+  overlay.style.display = 'flex';
+}
+
+function closeDocModal(e){
+  if(e) e.stopPropagation();
+  var overlay = document.getElementById('docModal');
+  var img = document.getElementById('docModalImg');
+  img.src = '';
+  overlay.style.display = 'none';
+}
+
+// Vincular clics a miniaturas al cargar
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.doc-thumb').forEach(function(el){
+    el.addEventListener('click', function(){
+      openDocModal(el.src || el.getAttribute('src'), el.alt || el.getAttribute('alt'));
+    });
+  });
+});
