@@ -1,344 +1,280 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>SGSI - Documentos</title>
-    <link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<header>
-			<div
-				style="
-					max-width: 1100px;
-					margin: 0 auto;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-				"
-			>
-				<div style="display: flex; align-items: center">
-					<img src="assets/LAMARINA.png" alt="LA MARINA" class="logo" />
-					<div>
-						<h1>SGSI LA MARINA</h1>
-					</div>
-				</div>
-				<nav>
-					<a href="#políticas">Políticas</a>
-					<a href="#objetivos">Objetivos</a>
-					<a href="#procesos">Procesos</a>
-					<a href="#documentos">Descargas</a>
-				</nav>
-			</div>
-		</header>
-
-		<main class="container">
-			<div class="grid">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>SGSI - Documentos</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div style="max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center">
+			<div style="display:flex;align-items:center">
+				<img src="assets/LAMARINA.png" alt="LA MARINA" class="logo">
 				<div>
-					<!-- Políticas -->
-					<section id="políticas" class="card">
-						<h2>Políticas</h2>
-						<p class="small">
-							Su propósito es establecer las reglas y lineamientos que guían la
-							protección de la información y el cumplimiento de los controles de
-							seguridad definidos por la organización.
-						</p>
-
-						<!-- Política 1 -->
-						<div class="policy-row">
-							<div style="flex: 1">
-								<strong
-									>POL-01: Política de Seguridad de Datos y Transacciones en
-									eCommerce</strong
-								>
-								<div class="small">
-									Proteger los datos personales, financieros y transaccionales
-									de los clientes que interactúan con la tienda en línea,
-									evitando incidentes de seguridad, fraude y uso indebido de la
-									información.
-								</div>
-							</div>
-							<div style="text-align: right">
-								<button class="btn" onclick="showPolicy('POL-01')">
-									Ver / Descargar
-								</button>
-							</div>
-						</div>
-
-						<!--  Política 2 -->
-						<div class="policy-row">
-							<div style="flex: 1">
-								<strong
-									>POL-02: Política de Sincronización e Integridad de
-									Inventarios y Omnicanalidad</strong
-								>
-								<div class="small">
-									Garantizar que los inventarios mostrados en la tienda en línea
-									coincidan con los inventarios reales de tiendas físicas,
-									bodegas y sistemas internos, reduciendo errores y pedidos no
-									entregables.
-								</div>
-							</div>
-							<div style="text-align: right">
-								<button class="btn" onclick="showPolicy('POL-02')">
-									Ver / Descargar
-								</button>
-							</div>
-						</div>
-
-						<!-- Política 3 -->
-						<div class="policy-row">
-							<div style="flex: 1">
-								<strong
-									>POL-03:Política de Disponibilidad y Desempeño de Plataformas
-									de eCommerce</strong
-								>
-								<div class="small">
-									Asegurar que la plataforma de comercio electrónico, catálogos,
-									pasarelas y sistemas relacionados operen con altos niveles de
-									disponibilidad, rendimiento y estabilidad.
-								</div>
-							</div>
-							<div style="text-align: right">
-								<button class="btn" onclick="showPolicy('POL-03')">
-									Ver / Descargar
-								</button>
-							</div>
-						</div>
-
-						<!-- Política 4 -->
-						<div class="policy-row">
-							<div style="flex: 1">
-								<strong
-									>POL-04:Política de Logística Digital, Entregas y Seguimiento
-									de Pedidos</strong
-								>
-								<div class="small">
-									Optimizar el proceso logístico digital para garantizar
-									entregas puntuales, trazabilidad completa y comunicación
-									transparente con los clientes.
-								</div>
-							</div>
-							<div style="text-align: right">
-								<button class="btn" onclick="showPolicy('POL-04')">
-									Ver / Descargar
-								</button>
-							</div>
-						</div>
-
-						<hr />
-						<div id="policyDetail" style="display: none; margin-top: 10px">
-							<h3 id="policyTitle"></h3>
-							<p id="policyDesc" class="small"></p>
-							<a
-								id="downloadPolicy"
-								class="btn"
-								href="/mnt/data/matriz de contexto.xlsx"
-								download
-								>Descargar documento relacionado</a
-							>
-							<button
-								class="btn secondary"
-								style="margin-left: 8px"
-								onclick="closePolicy()"
-							>
-								Cerrar
-							</button>
-						</div>
-					</section>
-
-					<!-- Objetivos -->
-					<section id="objetivos" class="card" style="margin-top: 12px">
-						<h2>Objetivos del SGSI</h2>
-						<ol>
-							<li>
-								<strong>Proteger la información utilizada en los procesos de eCommerce y Marketplace de La Marina:</strong> Salvaguardar los datos críticos de negocio en todas las plataformas digitales.
-							</li>
-							<li>
-								<strong>Garantizar la confidencialidad, integridad y disponibilidad de los datos de clientes, pedidos, inventarios, transacciones y proveedores:</strong> Mantener los tres pilares fundamentales de la seguridad de la información.
-							</li>
-							<li>
-								<strong>Asegurar el funcionamiento confiable de las plataformas digitales:</strong> Incluyendo la tienda en línea, integraciones con VTEX, marketplaces y sistemas logísticos.
-							</li>
-							<li>
-								<strong>Reducir los riesgos tecnológicos:</strong> Mitigar ciberataques, fraude, fallas de plataforma y desincronización de inventarios.
-							</li>
-							<li>
-								<strong>Establecer controles de seguridad:</strong> Implementar medidas que permitan operaciones digitales estables, seguras y alineadas al negocio.
-							</li>
-							<li>
-								<strong>Fortalecer la continuidad operativa:</strong> Garantizar que las ventas, envíos y procesos digitales funcionen sin interrupciones significativas.
-							</li>
-							<li>
-								<strong>Promover la mejora continua:</strong> En los procesos de seguridad, integraciones tecnológicas y servicio al cliente.
-							</li>
-						</ol>
-						<p class="small">
-							Cada objetivo cuenta con métricas e indicadores asociados que permiten monitorear el cumplimiento y efectividad de los controles implementados.
-						</p>
-					</section>
-
-					<!-- Procesos (adaptado a e-commerce y marketplace) -->
-					<section id="procesos" class="card" style="margin-top: 12px">
-						<h2>Procesos</h2>
-						<p class="small">Proceso funcional implementado: gestión de e-commerce y marketplace.</p>
-
-						<div style="margin-top: 8px">
-							<h3>Proceso: Gestión e-commerce y Marketplace (PROC-ECOMM)</h3>
-							<p>
-								<strong>Objetivo del proceso:</strong> Asegurar que la plataforma de e-commerce y marketplace opere con seguridad, disponibilidad y confianza para clientes y vendedores, mitigando riesgos como fraude, fallos en pagos, pérdida de pedidos o interrupciones del servicio.
-							</p>
-
-							<label>Indicadores del proceso (obligatorio medir):</label>
-							<table>
-								<thead>
-									<tr>
-										<th>Indicador</th>
-										<th>Descripción</th>
-										<th>Meta</th>
-										<th>Último valor</th>
-									</tr>
-								</thead>
-								<tbody id="indicatorsTable">
-									<tr>
-										<td>% Transacciones exitosas</td>
-										<td>% de pagos completados sin error sobre el total de intentos</td>
-										<td>≥ 98%</td>
-										<td id="val1">96%</td>
-									</tr>
-									<tr>
-										<td>Tiempo medio de entrega</td>
-										<td>Tiempo medio (horas) desde confirmación hasta entrega al cliente</td>
-										<td>≤ 48h</td>
-										<td id="val2">54h</td>
-									</tr>
-									<tr>
-										<td>Tasa de fraude</td>
-										<td>% de transacciones identificadas como fraude o chargeback</td>
-										<td>≤ 0.5%</td>
-										<td id="val3">0.9%</td>
-									</tr>
-								</tbody>
-							</table>
-
-							<div style="margin-top: 10px">
-								<label for="updateInd">Actualizar indicador (simulación):</label>
-								<select id="indSelect">
-									<option value="val1">% Transacciones exitosas</option>
-									<option value="val2">Tiempo medio de entrega</option>
-									<option value="val3">Tasa de fraude</option>
-								</select>
-								<input id="indValue" type="text" placeholder="Nuevo valor (ej. 98% o 36h o 0.3%)" />
-								<button class="btn" onclick="updateIndicator()">Actualizar</button>
-							</div>
-
-							<hr />
-
-							<h4>Hallazgos (incidencias detectadas)</h4>
-							<p class="small">
-								Registra aquí los hallazgos relacionados con el proceso. Deben incluir: descripción, impacto, recomendación y responsable.
-							</p>
-
-							<div>
-								<label>Descripción del hallazgo:</label>
-								<textarea
-									id="hallazgoDesc"
-									rows="3"
-									placeholder="Ej: Fallos en sincronización de inventario"
-								></textarea>
-								<label>Impacto:</label>
-								<input
-									id="hallazgoImpact"
-									type="text"
-									placeholder="Ej: Sobreventa o pérdida de ventas"
-								/>
-								<label>Recomendación:</label>
-								<input
-									id="hallazgoRec"
-									type="text"
-									placeholder="Ej: Implementar validaciones en tiempo real"
-								/>
-								<label>Responsable:</label>
-								<input
-									id="hallazgoResp"
-									type="text"
-									placeholder="Ej: Equipo de Operaciones TI"
-								/>
-								<div style="margin-top: 8px">
-									<button class="btn" onclick="addHallazgo()">
-										Registrar Hallazgo
-									</button>
-								</div>
-								<div id="hallazgosList"></div>
-							</div>
-						</div>
-					</section>
-
-					<!-- Documentos -->
-					<section id="documentos" class="card" style="margin-top: 12px">
-						<h2>Documentos del SGI</h2>
-						<ul>
-							<li>
-								<strong>Políticas (POL-01, POL-02...)</strong> — Documento
-								central de políticas.
-							</li>
-							<li>
-								<strong>Objetivos y métricas</strong> — Documento que define
-								metas, indicadores y responsable.
-							</li>
-							<li>
-								<strong>Registro de hallazgos</strong> — Histórico de hallazgos
-								y acciones correctivas.
-							</li>
-						</ul>
-						<p class="small">
-							Puedes descargar la matriz de contexto que subiste para integrar:
-						</p>
-						<p class="download-link">
-							<a class="btn" href="/mnt/data/matriz de contexto.xlsx" download
-								>Descargar matriz de contexto</a
-							>
-						</p>
-					</section>
+					<h1>SGSI LA MARINA</h1>
 				</div>
-
-				<aside>
-					<section class="card">
-						<h3>Resumen</h3>
-						<p class="small">
-							El SGSI busca asegurar operaciones digitales confiables, prevenir incidentes de seguridad, reducir riesgos tecnológicos y fortalecer el desempeño de los servicios en línea, permitiendo que La Marina brinde una experiencia segura, eficiente y continua a sus clientes y socios comerciales.
-						</p>
-						<hr />
-						<h4>Estado</h4>
-						<p id="status" class="small">
-							Indicadores con valores de ejemplo. Si un indicador está fuera de
-							objetivo, registrar hallazgo.
-						</p>
-						<div style="margin-top: 10px">
-							<button class="btn" onclick="simulateCheck()">
-								Comprobar Indicadores
-							</button>
-						</div>
-					</section>
-
-					<section class="card" style="margin-top: 12px">
-						<h3>Ayuda / Notas</h3>
-						<ul class="small">
-							<li>
-								Registra evidencia para cada política (firmas, versiones,
-								fecha).
-							</li>
-							<li>Mide indicadores periódicamente y actualiza el SoA.</li>
-							<li>Revisa Anexo A para decidir controles aplicables.</li>
-						</ul>
-					</section>
-				</aside>
 			</div>
+			<nav>
+				<a href="#políticas">Políticas</a>
+				<a href="#objetivos">Objetivos</a>
+				<a href="#procesos">Procesos</a>
+				<a href="#documentos">Documentación</a>
+				<a href="#documentos-empresa">Descargas</a>
+			</nav>
+		</div>
+	</header>
 
-    <footer>
-    </footer>
-  </main>
+	<main class="container">
+		<div class="grid">
+			<div>
+				<!-- Políticas -->
+				<section id="políticas" class="card">
+					<h2>Políticas</h2>
+					<p class="small">Su propósito es establecer las reglas y lineamientos que guían la protección de la información y el cumplimiento de los controles de seguridad definidos por la organización.</p>
 
-		<script src="main.js"></script>
-	</body>
+					<!-- Política 1 -->
+					<div class="policy-row">
+						<div style="flex:1">
+							<strong>POL-01: Política de Seguridad de Datos y Transacciones en eCommerce</strong>
+							<div class="small">Proteger los datos personales, financieros y transaccionales de los clientes que interactúan con la tienda en línea, evitando incidentes de seguridad, fraude y uso indebido de la información.</div>
+						</div>
+						<div style="text-align:right">
+							<button class="btn" onclick="showPolicy('POL-01')">Ver / Descargar</button>
+						</div>
+					</div>
+
+					<!-- Política 2 -->
+					<div class="policy-row">
+						<div style="flex:1">
+							<strong>POL-02: Política de Sincronización e Integridad de Inventarios y Omnicanalidad</strong>
+							<div class="small">Garantizar que los inventarios mostrados en la tienda en línea coincidan con los inventarios reales de tiendas físicas, bodegas y sistemas internos, reduciendo errores y pedidos no entregables.</div>
+						</div>
+						<div style="text-align:right">
+							<button class="btn" onclick="showPolicy('POL-02')">Ver / Descargar</button>
+						</div>
+					</div>
+
+					<!-- Política 3 -->
+					<div class="policy-row">
+						<div style="flex:1">
+							<strong>POL-03: Política de Disponibilidad y Desempeño de Plataformas de eCommerce</strong>
+							<div class="small">Asegurar que la plataforma de comercio electrónico, catálogos, pasarelas y sistemas relacionados operen con altos niveles de disponibilidad, rendimiento y estabilidad.</div>
+						</div>
+						<div style="text-align:right">
+							<button class="btn" onclick="showPolicy('POL-03')">Ver / Descargar</button>
+						</div>
+					</div>
+
+					<!-- Política 4 -->
+					<div class="policy-row">
+						<div style="flex:1">
+							<strong>POL-04: Política de Logística Digital, Entregas y Seguimiento de Pedidos</strong>
+							<div class="small">Optimizar el proceso logístico digital para garantizar entregas puntuales, trazabilidad completa y comunicación transparente con los clientes.</div>
+						</div>
+						<div style="text-align:right">
+							<button class="btn" onclick="showPolicy('POL-04')">Ver / Descargar</button>
+						</div>
+					</div>
+
+					<hr/>
+					<div id="policyDetail" style="display:none;margin-top:10px">
+						<h3 id="policyTitle"></h3>
+						<p id="policyDesc" class="small"></p>
+						<a id="downloadPolicy" class="btn" href="/mnt/data/matriz de contexto.xlsx" download>Descargar documento relacionado</a>
+						<button class="btn secondary" style="margin-left:8px" onclick="closePolicy()">Cerrar</button>
+					</div>
+				</section>
+
+				<!-- Objetivos -->
+				<section id="objetivos" class="card" style="margin-top:12px">
+					<h2>Objetivos del SGSI</h2>
+					<ol>
+						<li><strong>Proteger la información utilizada en los procesos de eCommerce y Marketplace de La Marina:</strong> Salvaguardar los datos críticos de negocio en todas las plataformas digitales.</li>
+						<li><strong>Garantizar la confidencialidad, integridad y disponibilidad de los datos de clientes, pedidos, inventarios, transacciones y proveedores:</strong> Mantener los tres pilares fundamentales de la seguridad de la información.</li>
+						<li><strong>Asegurar el funcionamiento confiable de las plataformas digitales:</strong> Incluyendo la tienda en línea, integraciones con VTEX, marketplaces y sistemas logísticos.</li>
+						<li><strong>Reducir los riesgos tecnológicos:</strong> Mitigar ciberataques, fraude, fallas de plataforma y desincronización de inventarios.</li>
+						<li><strong>Establecer controles de seguridad:</strong> Implementar medidas que permitan operaciones digitales estables, seguras y alineadas al negocio.</li>
+						<li><strong>Fortalecer la continuidad operativa:</strong> Garantizar que las ventas, envíos y procesos digitales funcionen sin interrupciones significativas.</li>
+						<li><strong>Promover la mejora continua:</strong> En los procesos de seguridad, integraciones tecnológicas y servicio al cliente.</li>
+					</ol>
+					<p class="small">Cada objetivo cuenta con métricas e indicadores asociados que permiten monitorear el cumplimiento y efectividad de los controles implementados.</p>
+				</section>
+
+				<!-- Procesos (adaptado a e-commerce y marketplace) -->
+				<section id="procesos" class="card" style="margin-top:12px">
+					<h2>Procesos</h2>
+					<p class="small">Proceso funcional implementado: gestión de e-commerce y marketplace.</p>
+
+					<div style="margin-top:8px">
+						<h3>Proceso: Gestión e-commerce y Marketplace (PROC-ECOMM)</h3>
+						<p><strong>Objetivo del proceso:</strong> Asegurar que la plataforma de e-commerce y marketplace opere con seguridad, disponibilidad y confianza para clientes y vendedores, mitigando riesgos como fraude, fallos en pagos, pérdida de pedidos o interrupciones del servicio.</p>
+
+						<label>Indicadores del proceso (obligatorio medir):</label>
+						<table>
+							<thead>
+								<tr><th>Indicador</th><th>Descripción</th><th>Meta</th><th>Último valor</th></tr>
+							</thead>
+							<tbody id="indicatorsTable">
+								<tr>
+									<td>% Transacciones exitosas</td>
+									<td>% de pagos completados sin error sobre el total de intentos</td>
+									<td>≥ 98%</td>
+									<td id="val1">96%</td>
+								</tr>
+								<tr>
+									<td>Tiempo medio de entrega</td>
+									<td>Tiempo medio (horas) desde confirmación hasta entrega al cliente</td>
+									<td>≤ 48h</td>
+									<td id="val2">54h</td>
+								</tr>
+								<tr>
+									<td>Tasa de fraude</td>
+									<td>% de transacciones identificadas como fraude o chargeback</td>
+									<td>≤ 0.5%</td>
+									<td id="val3">0.9%</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div style="margin-top:10px">
+							<label for="updateInd">Actualizar indicador (simulación):</label>
+							<select id="indSelect">
+								<option value="val1">% Transacciones exitosas</option>
+								<option value="val2">Tiempo medio de entrega</option>
+								<option value="val3">Tasa de fraude</option>
+							</select>
+							<input id="indValue" type="text" placeholder="Nuevo valor (ej. 98% o 36h o 0.3%)" />
+							<button class="btn" onclick="updateIndicator()">Actualizar</button>
+						</div>
+
+						<hr />
+
+						<h4>Hallazgos (incidencias detectadas)</h4>
+						<p class="small">Registra aquí los hallazgos relacionados con el proceso. Deben incluir: descripción, impacto, recomendación y responsable.</p>
+
+						<div>
+							<label>Descripción del hallazgo:</label>
+							<textarea id="hallazgoDesc" rows="3" placeholder="Ej: Fallos en sincronización de inventario"></textarea>
+							<label>Impacto:</label>
+							<input id="hallazgoImpact" type="text" placeholder="Ej: Sobreventa o pérdida de ventas" />
+							<label>Recomendación:</label>
+							<input id="hallazgoRec" type="text" placeholder="Ej: Implementar validaciones en tiempo real" />
+							<label>Responsable:</label>
+							<input id="hallazgoResp" type="text" placeholder="Ej: Equipo de Operaciones TI" />
+							<div style="margin-top:8px">
+								<button class="btn" onclick="addHallazgo()">Registrar Hallazgo</button>
+							</div>
+							<div id="hallazgosList"></div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Documentación del SGSI -->
+				<section id="documentos" class="card" style="margin-top:12px">
+					<h2>Documentación del SGSI</h2>
+					<p class="small">A continuación se presentan los componentes clave de la documentación del Sistema de Gestión de Seguridad de la Información:</p>
+
+					<!-- Organigrama -->
+					<div style="margin-top:12px;padding:10px;background:#f9f9f9;border-left:4px solid #1a6b4b;border-radius:4px">
+								<h4 style="margin-top:0">Organigrama</h4>
+						<p class="small"><strong>¿Qué es?</strong> Estructura jerárquica que define los roles, responsabilidades y líneas de autoridad dentro de la organización para la gestión de seguridad de la información.</p>
+						<p class="small"><strong>Componentes:</strong> Dirección General, Responsable SGSI, Equipo de Seguridad TI, Responsables de Procesos, y todas las áreas involucradas.</p>
+						<p class="small"><strong>Propósito:</strong> Establecer quién es responsable de qué en materia de seguridad y cómo fluye la comunicación en la organización.</p>
+					</div>
+
+					<!-- Cédula de Procesos -->
+					<div style="margin-top:12px;padding:10px;background:#f9f9f9;border-left:4px solid #1a6b4b;border-radius:4px">
+								<h4 style="margin-top:0">Cédula de Procesos</h4>
+						<p class="small"><strong>¿Qué es?</strong> Documento que describe detalladamente cada proceso, incluyendo su objetivo, alcance, partes interesadas, entradas, actividades y salidas.</p>
+						<p class="small"><strong>Propósito:</strong> Documentar cómo se ejecutan los procesos y qué controles de seguridad deben aplicarse en cada uno.</p>
+					</div>
+
+					<!-- Matriz RACI -->
+					<div style="margin-top:12px;padding:10px;background:#f9f9f9;border-left:4px solid #1a6b4b;border-radius:4px">
+								<h4 style="margin-top:0">Matriz RACI</h4>
+						<p class="small"><strong>¿Qué es?</strong> Herramienta que define responsabilidades para cada tarea/proceso: Responsable (R), Accountable (A), Consultado (C), Informado (I).</p>
+						<p class="small"><strong>Propósito:</strong> Eliminar ambigüedad sobre quién hace qué y evitar duplicación o vacíos en responsabilidades.</p>
+					</div>
+
+					<!-- Plan PHVA -->
+					<div style="margin-top:12px;padding:10px;background:#f9f9f9;border-left:4px solid #1a6b4b;border-radius:4px">
+								<h4 style="margin-top:0">Plan PHVA (Ciclo Deming)</h4>
+						<p class="small"><strong>¿Qué es?</strong> Metodología de mejora continua con cuatro fases: Planificar, Hacer, Verificar, Actuar.</p>
+						<ul class="small">
+							<li><strong>P (Planificar):</strong> Definir políticas, objetivos y controles</li>
+							<li><strong>H (Hacer):</strong> Implementar controles y entrenar personal</li>
+							<li><strong>V (Verificar):</strong> Medir indicadores y realizar auditorías</li>
+							<li><strong>A (Actuar):</strong> Tomar acciones correctivas y mejorar</li>
+						</ul>
+						<p class="small"><strong>Propósito:</strong> Garantizar mejora continua del SGSI.</p>
+					</div>
+
+					<!-- Políticas -->
+					<div style="margin-top:12px;padding:10px;background:#f9f9f9;border-left:4px solid #1a6b4b;border-radius:4px">
+								<h4 style="margin-top:0">Políticas del SGSI</h4>
+						<p class="small"><strong>¿Qué son?</strong> Documentos que establecen las reglas y lineamientos que guían la protección de la información y el cumplimiento de controles de seguridad.</p>
+						<p class="small"><strong>Propósito:</strong> Comunicar la dirección estratégica de seguridad a toda la organización y servir como base para implementar controles.</p>
+					</div>
+				</section>
+
+				<!-- Documentos de la Empresa -->
+				<section id="documentos-empresa" class="card" style="margin-top:12px">
+						<h2>Descargas - Documentos de la Empresa</h2>
+					<p class="small">Repositorio de documentos específicos de la organización: organigramas, cédulas de procesos, matrices RACI, planes PHVA y políticas implementadas.</p>
+
+					<div style="margin-top:12px">
+								<h4>Documentos disponibles:</h4>
+						<ul class="small">
+							<li><strong>Organigrama SGSI</strong> - Estructura de roles y responsabilidades</li>
+							<li><strong>Cédulas de Procesos</strong> - Documentación de procesos de negocio</li>
+							<li><strong>Matriz RACI</strong> - Definición de responsabilidades por proceso</li>
+							<li><strong>Plan PHVA</strong> - Planificación de mejora continua</li>
+							<li><strong>Políticas del SGSI</strong> - Todas las políticas implementadas</li>
+							<li><strong>Matriz de Contexto</strong> - Análisis del contexto organizacional</li>
+						</ul>
+					</div>
+
+					<hr/>
+					<div style="margin-top:12px">
+						<p class="small"><strong>Descarga la matriz de contexto:</strong></p>
+						<p class="download-link">
+							<a class="btn" href="/mnt/data/matriz de contexto.xlsx" download>Descargar matriz de contexto</a>
+						</p>
+					</div>
+				</section>
+			</div>			<aside>
+				<section class="card">
+					<h3>Resumen</h3>
+					<p class="small">
+						El SGSI busca asegurar operaciones digitales confiables, prevenir incidentes de seguridad, reducir riesgos tecnológicos y fortalecer el desempeño de los servicios en línea, permitiendo que La Marina brinde una experiencia segura, eficiente y continua a sus clientes y socios comerciales.
+					</p>
+					<hr />
+					<h4>Estado</h4>
+					<p id="status" class="small">
+						Indicadores con valores de ejemplo. Si un indicador está fuera de objetivo, registrar hallazgo.
+					</p>
+					<div style="margin-top:10px">
+						<button class="btn" onclick="simulateCheck()">Comprobar Indicadores</button>
+					</div>
+				</section>
+
+				<section class="card" style="margin-top:12px">
+					<h3>Ayuda / Notas</h3>
+					<ul class="small">
+						<li>Registra evidencia para cada política (firmas, versiones, fecha).</li>
+						<li>Mide indicadores periódicamente y actualiza el SoA.</li>
+						<li>Revisa Anexo A para decidir controles aplicables.</li>
+					</ul>
+				</section>
+			</aside>
+		</div>
+
+		<footer>
+			<div class="small">Generado como plantilla básica de SGSI — adapta textos y controles según el alcance real de tu organización.</div>
+		</footer>
+	</main>
+
+	<script src="main.js"></script>
+</body>
 </html>

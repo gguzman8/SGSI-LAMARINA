@@ -2,7 +2,7 @@ body {
 	font-family: Inter, Roboto, Arial;
 	margin: 0;
 	background: #f6f8fa;
-	color: #111;
+	color: #000;
 }
 header {
 	background: #1a6b4b;
@@ -37,6 +37,29 @@ nav a {
 h1 {
 	margin: 0 0 10px 0;
 	font-size: 20px;
+}
+h2 {
+	margin: 0 0 8px 0;
+	font-size: 15px;
+	color: #000;
+	font-weight: 600;
+}
+h3 {
+	margin: 0 0 8px 0;
+	font-size: 14px;
+	color: #000;
+	font-weight: 600;
+}
+h4 {
+	margin: 0 0 6px 0;
+	font-size: 14px;
+	color: #000;
+	font-weight: 600;
+}
+p {
+	font-size: 14px;
+	color: #000;
+	margin: 0 0 8px 0;
 }
 .grid {
 	display: grid;
@@ -78,8 +101,8 @@ td {
 	background: #6c757d;
 }
 .small {
-	font-size: 13px;
-	color: #444;
+	font-size: 14px;
+	color: #000;
 }
 .policy-row {
 	display: flex;
@@ -95,6 +118,7 @@ label {
 	display: block;
 	margin-top: 8px;
 	font-weight: 600;
+	color: #000;
 }
 input[type="text"],
 textarea,
@@ -117,8 +141,8 @@ select {
 	margin-top: 8px;
 }
 footer {
-	font-size: 13px;
-	color: #666;
+	font-size: 14px;
+	color: #000;
 	margin-top: 14px;
 }
 .download-link {
