@@ -18,7 +18,7 @@ function showPolicy(key){
       
       document.getElementById('policyTitle').innerText = title;
       document.getElementById('policyDesc').innerText = desc;
-      document.getElementById('downloadPolicy').href = '/mnt/data/matriz de contexto.xlsx';
+      document.getElementById('downloadPolicy').href = 'docs/' + key + '.pdf';
       document.getElementById('policyDetail').style.display = 'block';
       window.location.hash = '#políticas';
     }
