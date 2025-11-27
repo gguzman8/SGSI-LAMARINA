@@ -169,20 +169,69 @@ footer {
 .doc-entry {
 	display: flex;
 	gap: 12px;
-	align-items: stretch; /* permitir que la miniatura llene la altura del contenedor */
+	align-items: center; /* centrar imágenes verticalmente dentro de la tarjeta */
 }
 .doc-thumb {
-	height: 100%;    /* ocupar la altura del .doc-entry */
-	width: auto;      /* ancho se adapta proporcionalmente */
-	max-width: 160px; /* evitar que la imagen empuje demasiado el diseño */
+	height: 160px;     /* aumentar la altura para mejorar legibilidad */
+	width: auto;       /* ancho se adapta proporcionalmente */
+	max-width: 320px;  /* permitir imágenes más anchas para leer texto */
 	display: block;
-	object-fit: cover;
+	object-fit: contain; /* mostrar la imagen completa para poder leer el texto */
 	border-radius: 6px;
 	border: 1px solid #e6e9ef;
+	background: #fff;
 }
 .doc-entry .doc-text {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+}
+
+/* Modal / lightbox para ampliar documentación */
+.doc-thumb { cursor: zoom-in; }
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+	display: none;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+	padding: 20px;
+}
+.modal-content {
+	background: #fff;
+	border-radius: 8px;
+	max-width: 95vw;
+	max-height: 95vh;
+	overflow: auto;
+	box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+	position: relative;
+}
+.modal-content img {
+	display: block;
+	max-width: 90vw;
+	max-height: 80vh;
+	width: auto;
+	height: auto;
+}
+.modal-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background: rgba(0,0,0,0.6);
+	color: #fff;
+	border: none;
+	padding: 6px 10px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.modal-caption {
+	padding: 8px 12px;
+	font-size: 14px;
+	color: #222;
 }

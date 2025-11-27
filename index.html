@@ -610,9 +610,18 @@
 				</div>
 			</section>
 
-			<footer></footer>
-		</main>
 
-		<script src="main.js"></script>
-	</body>
+			<!-- Modal para ampliar documentos -->
+	<div id="docModal" class="modal-overlay" onclick="closeDocModal(event)">
+		<div class="modal-content" role="dialog" aria-modal="true" onclick="event.stopPropagation()">
+			<button class="modal-close" onclick="closeDocModal(event)">Cerrar</button>
+			<img id="docModalImg" src="" alt="" />
+			<div id="docModalCaption" class="modal-caption"></div>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+
+	
+</body>
 </html>
