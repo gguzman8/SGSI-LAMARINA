@@ -104,6 +104,16 @@ td {
 	font-size: 14px;
 	color: #000;
 }
+
+/* Documentación: asegurar que el texto explicativo y el de las tarjetas tengan el mismo tamaño */
+#documentos p,
+#documentos .small,
+#documentos .card p,
+#documentos div[style] p {
+	font-size: 16px;
+	line-height: 1.45;
+	color: #000;
+}
 .policy-row {
 	display: flex;
 	align-items: center;
@@ -149,4 +159,20 @@ footer {
 	display: inline-flex;
 	gap: 8px;
 	align-items: center;
+}
+
+/* Miniaturas e layout para tarjetas de documentación */
+.doc-entry {
+	display: flex;
+	gap: 12px;
+}
+.doc-thumb {
+	width: 96px;
+	height: auto;
+	object-fit: cover;
+	border-radius: 6px;
+	border: 1px solid #e6e9ef;
+}
+.doc-entry .doc-text {
+	flex: 1;
 }
