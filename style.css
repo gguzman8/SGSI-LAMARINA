@@ -257,6 +257,11 @@ footer {
 	color: #856404;
 }
 
+.badge-info {
+	background: #d1ecf1;
+	color: #0c5460;
+}
+
 .btn-small {
 	padding: 6px 12px;
 	font-size: 13px;
@@ -299,6 +304,27 @@ footer {
 
 .hallazgo:first-child {
 	margin-top: 0;
+}
+
+.status-select {
+	padding: 6px 10px;
+	border: 1px solid #ced4da;
+	border-radius: 6px;
+	font-size: 13px;
+	background: white;
+	cursor: pointer;
+	font-weight: 600;
+	color: #495057;
+}
+
+.status-select:hover {
+	border-color: #1a6b4b;
+}
+
+.status-select:focus {
+	outline: none;
+	border-color: #1a6b4b;
+	box-shadow: 0 0 0 2px rgba(26, 107, 75, 0.1);
 }
 
 #hallazgoForm {
