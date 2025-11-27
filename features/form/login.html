@@ -91,14 +91,21 @@
             const usuario = document.getElementById('loginUsuario').value;
             const password = document.getElementById('loginPassword').value;
             
-            // Aquí puedes agregar la lógica de autenticación
-            console.log('Login:', { usuario, password });
+            // Usuarios válidos
+            const usuarios = {
+                'admin': 'admin',
+                'trabajador': 'trabajador'
+            };
             
-            // Ejemplo: redirigir a index.html después del login exitoso
-            // window.location.href = 'index.html';
+            // Validar credenciales
+            if (usuarios[usuario] && usuarios[usuario] === password) {
+                // Login exitoso
+                window.location.href = '../../index.html';
+            } else {
+                // Login fallido
+                alert('Usuario o contraseña incorrectos');
+            }
             
-            // alert('Inicio de sesión exitoso');
-            window.location.href = '../index.html';
             return false;
         }
 
